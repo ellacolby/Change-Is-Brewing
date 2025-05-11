@@ -240,7 +240,7 @@ class CoffeePricingEnv(gym.Env):
         self.recent_avg_price = np.mean(self.recent_prices)
 
         # track number of consecutive high-price days
-        if self.recent_avg_price > 650:  # above $6.00 average
+        if self.recent_avg_price > 650:  # above $6.50 average
             self.high_price_days += 1
         else:
             self.high_price_days = max(0, self.high_price_days - 1)
